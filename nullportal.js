@@ -18,9 +18,7 @@ var nullportal = {
 
         console.log('[nullportal]:\tSetup Complete');
     },
-    hello: function (req, callback) {
-
-        /*XXX*/console.log('[nullportal]:\t%j', req.headers);
+    getPage: function (req, callback) {
 
         callback(index);
 
