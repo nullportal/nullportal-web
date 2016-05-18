@@ -8,9 +8,6 @@ var index   = {};
 var nullportal = {
 
     setup: function () {
-        app.engine('html', require('ejs').renderFile);
-        app.set('view engine', 'html');
-        app.use(express.static(__dirname + '/views'));
 
         fs.readFile(basePath + 'index.ejs', 'utf8', function (error, data) {
             index = (! error) ? data : '404';
