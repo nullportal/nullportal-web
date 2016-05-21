@@ -1,6 +1,5 @@
 var express = require('express');
 var app     = express();
-var fs      = require('fs');
 var ejs     = require('ejs');
 
 var basePath= process.cwd() + '/nullportal-web/views/';
