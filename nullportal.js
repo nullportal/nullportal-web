@@ -1,6 +1,7 @@
 var express = require('express');
 var app     = express();
 var fs      = require('fs');
+var ejs     = require('ejs');
 
 var basePath= process.cwd() + '/nullportal-web/views/';
 var index   = {};
@@ -9,16 +10,17 @@ var nullportal = {
 
     setup: function () {
 
-        fs.readFile(basePath + 'index.ejs', 'utf8', function (error, data) {
-            index = (! error) ? data : '404';
-        });
-
         console.log('[nullportal]:\tSetup Complete');
     },
     getPage: function (req, callback) {
 
-        callback(index);
 
+        ejs.renderFile(basePath + 'index.ejs', function (error, data) {
+            if (error) throw new Error("Error rending EJS file: " + error);
+
+            callback(data);
+
+        });
     }
 };
 
