@@ -7,7 +7,7 @@ var nullportal = {
 
     setup: function () {
 
-        console.log('[nullportal]:\tSetup Complete');
+        console.log('[nullportal.js]:\tSetup Complete');
     },
     getPage: function (req, callback) {
 
