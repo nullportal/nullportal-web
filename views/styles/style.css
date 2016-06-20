@@ -11,6 +11,11 @@ h1 {
     text-align: center;
     letter-spacing: 1em;
     font-size: 4em;
+
+    /* title glow effect */
+    -webkit-animation-name: titleGlow;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
 }
 div.spanner {
     width: 100%;
@@ -23,4 +28,10 @@ div.spanner span {
 }
 span:hover {
     background-color: grey;
+}
+
+@-webkit-keyframes titleGlow {
+  from {    -webkit-box-shadow: 0 0 9px white; }
+  50% {     -webkit-box-shadow: 0 0 10px black; }
+  to {      -webkit-box-shadow: 0 0 9px white; }
 }
