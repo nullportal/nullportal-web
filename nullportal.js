@@ -12,7 +12,7 @@ var nullportal = {
     getPage: function (req, callback) {
 
         ejs.renderFile(basePath + 'index.ejs', function (error, data) {
-            if (error) throw new Error("Error rending EJS file: " + error);
+            if (error) throw new Error("Error rendering EJS file: " + error);
 
             callback(data);
 
